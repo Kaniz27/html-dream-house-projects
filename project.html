@@ -3,13 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About</title>
-<link href="https://cdn.tailwindcss.com" rel="stylesheet">
+<title>Projects</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-white m-0 p-0">
 
-<h1 class="text-4xl font-bold text-center mt-20">project Us</h1>
-<p class="text-center mt-4 text-gray-700">This is the content of the About page.</p>
+ <header class="bg-black text-white">
+  <div class="px-8 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1 1 0 01-1.414 0l-4.243-4.243a8 8 0 1111.314 0z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span class="text-sm md:text-[18px]">73, Waheed Masafi Centre, Purana Paltan Line (lift-6), Dhaka-1000</span>
+    </div>
+
+    <!-- Login Link -->
+    <a href="https://portal.uniflexlimited.com/" target="_blank" class="flex items-center gap-2 cursor-pointer hover:text-gray-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0 2c-3.33 0-10 1.667-10 5v3h20v-3c0-3.333-6.67-5-10-5z"/>
+      </svg>
+      <span class="text-sm md:text-[18px] font-medium">Login</span>
+    </a>
+  </div>
+</header>
+<header class="w-full bg-[#6e6e6e] py-4 px-10 flex items-center justify-between shadow-lg">
+
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+        <img 
+            src="https://uniflexlimited.com/wp-content/uploads/2024/05/Untitled-1-2.png" 
+            alt="Logo" 
+            class="h-30 w-30 object-contain"
+        >
+       
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="flex space-x-6 text-white font-semibold">
+            <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-400 transition">About</a></li>
+            <li><a href="project.html" class="hover:text-yellow-400 transition">Project</a></li>
+            <li><a href="news.html" class="hover:text-yellow-400 transition">News & Update</a></li>
+            <li><a href="booking.html" class="hover:text-yellow-400 transition">Booking</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-400 transition">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+<section 
+  class="w-full h-64 bg-cover bg-center flex items-center justify-center relative"
+  style="background-image: url('https://img.freepik.com/free-photo/boards-with-shiny-background_1253-49.jpg?semt=ais_hybrid&w=740&q=80');">
+
+  <!-- Overlay for dark effect (optional) -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- Center Text -->
+  <h1 class="relative z-10 text-white text-4xl font-bold text-center">
+   Our Site Map
+  </h1>
+
+</section>
+<section class="w-full h-96">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.903403543122!2d90.39629971543176!3d23.746466694536117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b8b52c1a91%3A0xf58cbbf305f6a7ab!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+    class="w-full h-full"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+<footer class="bg-gray-900 text-white py-12 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- About Section -->
+    <div class="flex flex-col items-start text-start space-y-4"> 
+      <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/removal.ai__94a6a3c3-01fc-4442-8397-04a2a9c5e043-logo-removebg-preview.png" 
+           alt="About Us Image" class="w-30 h-30 rounded-full object-cover">
+
+      <h3 class="text-lg font-semibold">About Us</h3>
+      <p class="text-gray-400 text-sm max-w-xs">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="space-y-2">
+      <h3 class="text-lg font-semibold mb-2">Navigation</h3>
+      <ul class="space-y-6 text-gray-400 text-sm">
+        <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="project.html" class="hover:text-yellow-400">Project</a></li>
+        <li><a href="news.html" class="hover:text-yellow-400">News & Update</a></li>
+        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Important Links -->
+    <div class="space-y-2">
+      <h3 class="text-lg font-semibold mb-2">Important Links</h3>
+      <ul class="space-y-6 text-gray-400 text-sm">
+        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+        <li><a href="project.html" class="hover:text-yellow-400">Project</a></li>
+        <li><a href="terms.html" class="hover:text-yellow-400">Terms & Condition</a></li>
+        <li><a href="refund.html" class="hover:text-yellow-400">Refund Policy</a></li>
+        <li><a href="faq.html" class="hover:text-yellow-400">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Address -->
+    <div class="space-y-2">
+      <h3 class="text-lg font-semibold mb-2">Quick Address</h3>
+      <p class="text-gray-400 text-sm font-semibold">UNIFLEX LIMITED</p>
+      <p class="text-gray-400 text-sm">
+        স্বপ্নপূরনের বাস্তব ঠিকানা <br>
+        73, Waheed Masafi Centre, Purana Paltan Line (lift-6), Dhaka-1000
+      </p>
+      <p class="text-gray-400 text-sm">Phone: 01937777102</p>
+      <p class="text-gray-400 text-sm">Email: uniflexlimited5@gmail.com</p>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="border-t border-gray-700 mt-8 pt-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-gray-500 text-sm px-6">
+      <!-- Left Side -->
+      <div>
+        ©2024 All rights reserved by UNIFLEX
+      </div>
+
+      <!-- Right Side -->
+      <div>
+        This site design and developed by: <span class="text-red-500 font-semibold">HSBLCO</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

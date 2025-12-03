@@ -13,7 +13,7 @@
 <body class="bg-gray-100 m-0 p-0">
 
 <!-- Top Header -->
-<header class="bg-black text-white">
+ <header class="bg-black text-white">
   <div class="px-8 py-3 flex items-center justify-between">
     <div class="flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -22,12 +22,14 @@
       </svg>
       <span class="text-sm md:text-[18px]">73, Waheed Masafi Centre, Purana Paltan Line (lift-6), Dhaka-1000</span>
     </div>
-    <div class="flex items-center gap-2 cursor-pointer hover:text-gray-300">
+
+    <!-- Login Link -->
+    <a href="https://portal.uniflexlimited.com/" target="_blank" class="flex items-center gap-2 cursor-pointer hover:text-gray-300">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5zm0 2c-3.33 0-10 1.667-10 5v3h20v-3c0-3.333-6.67-5-10-5z"/>
       </svg>
       <span class="text-sm md:text-[18px] font-medium">Login</span>
-    </div>
+    </a>
   </div>
 </header>
 
@@ -36,24 +38,29 @@
 
   <!-- Slides -->
   <div id="slides" class="h-full w-full relative">
+    
+    <!-- Slide 1 -->
     <div class="slide active absolute inset-0 bg-cover bg-center transition duration-500" 
          style="background-image: url('https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?cs=srgb&dl=pexels-binyaminmellish-106399.jpg&fm=jpg');"></div>
+
+    <!-- Slide 2 -->
     <div class="slide absolute inset-0 bg-cover bg-center transition duration-500" 
          style="background-image: url('https://thumbs.dreamstime.com/b/house-glow-sunset-high-quality-photo-357223884.jpg');"></div>
 
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+    <!-- Background Overlay FIXED -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 z-10 pointer-events-none"></div>
+
   </div>
 
-  <!-- Navigation and Logo (On Top) -->
-  <div class="absolute top-0 left-0 right-0 z-20 flex justify-between items-center px-10 py-6">
+  <!-- Navbar FIXED — now above everything -->
+  <div class="absolute top-0 left-0 right-0 z-[100] flex justify-between items-center px-10 py-6 bg-gray-900 bg-opacity-40">
     <div class="flex items-center space-x-2">
       <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/Untitled-1-2.png" 
            alt="Logo" class="h-30 w-30 object-contain">
     </div>
     <nav>
       <ul class="flex space-x-6 text-white font-semibold">
-        <li><a href="home.html" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
         <li><a href="about.html" class="hover:text-yellow-400 transition">About</a></li>
         <li><a href="project.html" class="hover:text-yellow-400 transition">Project</a></li>
         <li><a href="news.html" class="hover:text-yellow-400 transition">News & Update</a></li>
@@ -63,47 +70,58 @@
     </nav>
   </div>
 
-  <!-- Left & Right Arrow Buttons -->
-  <button onclick="prevSlide()" class="absolute left-5 top-1/2 transform -translate-y-1/2 z-30 bg-white bg-opacity-70 text-black px-4 py-2 rounded-full hover:bg-white transition">
+  <!-- Arrows -->
+  <button onclick="prevSlide()" 
+          class="absolute left-5 top-1/2 -translate-y-1/2 z-[100] bg-white bg-opacity-70 text-black px-4 py-2 rounded-full hover:bg-white transition">
     &#8592;
   </button>
-  <button onclick="nextSlide()" class="absolute right-5 top-1/2 transform -translate-y-1/2 z-30 bg-white bg-opacity-70 text-black px-4 py-2 rounded-full hover:bg-white transition">
+
+  <button onclick="nextSlide()" 
+          class="absolute right-5 top-1/2 -translate-y-1/2 z-[100] bg-white bg-opacity-70 text-black px-4 py-2 rounded-full hover:bg-white transition">
     &#8594;
   </button>
 
-  <!-- Cards Overlay on Hero -->
-  <div class="absolute bottom-20 left-0 right-0 z-20 px-4 flex flex-wrap items-start gap-6 justify-center">
+  <!-- Cards Section -->
+  <div class="absolute bottom-20 left-0 right-0 px-4 z-[100]">
 
-    <!-- Left Logo Image -->
-    <div class="flex-shrink-0">
-      <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/home_no.png" 
-           alt="Logo" class="h-30 w-30 object-contain">
+    <!-- dark overlay for card section -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 rounded-lg pointer-events-none"></div>
+
+    <div class="relative z-50 flex flex-wrap items-start gap-6 justify-center">
+
+      <!-- Left Logo -->
+      <div class="flex-shrink-0">
+        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/home_no.png" 
+             alt="Logo" class="h-30 w-30 object-contain">
+      </div>
+
+      <!-- Cards -->
+      <div class="flex flex-1 justify-center gap-6 flex-wrap">
+
+        <!-- Card 1 -->
+        <div class="text-white rounded-lg shadow-lg p-4 flex flex-col items-center max-w-xs backdrop-blur-md">
+          <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/category1.png" class="h-16 w-16 mb-2">
+          <h2 class="text-lg font-semibold">Ongoing</h2>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="text-white rounded-lg shadow-lg p-4 flex flex-col items-center max-w-xs  backdrop-blur-md">
+          <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/category2.png" class="h-16 w-16 mb-2">
+          <h2 class="text-lg font-semibold">Completed</h2>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="text-white rounded-lg shadow-lg p-4 flex flex-col items-center max-w-xs  backdrop-blur-md">
+          <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/category3.png" class="h-16 w-16 mb-2">
+          <h2 class="text-lg font-semibold">Outgoing</h2>
+        </div>
+
+      </div>
     </div>
-
-    <!-- Centered Cards -->
-    <div class="flex flex-1 justify-center gap-6 flex-wrap">
-      <!-- Card 1 -->
-      <div class="text-white bg-opacity-90 rounded-lg shadow-lg p-4 flex flex-col items-center max-w-xs">
-        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/category1.png" alt="Image 1" class="h-16 w-16 object-cover rounded mb-2">
-        <h2 class="text-lg font-semibold text-white text-center">Ongoing</h2>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="text-white bg-opacity-90 rounded-lg shadow-lg p-4 flex flex-col items-center max-w-xs">
-        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/category2.png" alt="Image 2" class="h-16 w-16 object-cover rounded mb-2">
-        <h2 class="text-lg font-semibold text-white text-center">Completed</h2>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="text-white bg-opacity-90 rounded-lg shadow-lg p-4 flex flex-col items-center max-w-xs">
-        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/category3.png" alt="Image 3" class="h-16 w-16 object-cover rounded mb-2">
-        <h2 class="text-lg font-semibold text-white text-center">Outgoing</h2>
-      </div>
-    </div>
-
   </div>
 
 </section>
+
 
 <script>
   const slides = document.querySelectorAll('.slide');
@@ -126,7 +144,16 @@
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     showSlide(currentIndex);
   }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight') nextSlide();
+    if(e.key === 'ArrowLeft') prevSlide();
+  });
 </script>
+
+
+
 
 <!-- Part 3 Section -->
 <section class="py-16 bg-gray-100">
@@ -144,8 +171,8 @@
          alt="Image 1" 
          class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
-      <h3 class="text-xl font-bold text-white mb-1">UNIFLEX MBR SKYLINE</h3>
-      <p class="text-white text-lg">Gulshan</p>
+      <h3 class="text-[16px]  text-white mb-1">UNIFLEX MBR SKYLINE</h3>
+      <p class="text-white text-sm">Gulshan</p>
     </div>
   </div>
 
@@ -155,8 +182,8 @@
          alt="Image 2" 
          class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
-      <h3 class="text-xl font-bold text-white mb-1">UNIFLEX MBR SKYLINE</h3>
-      <p class="text-white text-lg">Gulshan</p>
+      <h3 class="text-[16px]  text-white mb-1">UNIFLEX MBR SKYLINE</h3>
+      <p class="text-white text-sm">Gulshan</p>
     </div>
   </div>
 
@@ -166,8 +193,8 @@
          alt="Image 3" 
          class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
-      <h3 class="text-xl font-bold text-white mb-1">UNIFLEX MBR SKYLINE</h3>
-      <p class="text-white text-lg">Gulshan</p>
+      <h3 class="text-[16px]  text-white mb-1">UNIFLEX MBR SKYLINE</h3>
+      <p class="text-white text-sm">Gulshan</p>
     </div>
   </div>
 
@@ -177,8 +204,8 @@
          alt="Image 4" 
          class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
-      <h3 class="text-xl font-bold text-white mb-1">UNIFLEX MBR SKYLINE</h3>
-      <p class="text-white text-lg">Gulshan</p>
+      <h3 class="text-[16px]  text-white mb-1">UNIFLEX MBR SKYLINE</h3>
+      <p class="text-white text-sm">Gulshan</p>
     </div>
   </div>
 
@@ -188,49 +215,167 @@
 <!--  -->
 <div class="text-center bg-black text-white py-6  text-xl">OUR SITE MAP</div>
 <!--  -->
-<section class="py-16 bg-gray-100">
-  <div class=" mx-auto px-4">
-    <h2 class="text-4xl  text-center mb-10">WHAT SETS US APART</h2>
-
-   <div class="flex justify-between gap-4">
-  <!-- Card 1 -->
-  <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
-    <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1598874514OFI5T-1-1.png" class="w-16 h-16 object-cover mb-4" alt="Experience">
-    <h3 class="font-semibold text-black text-lg mb-2">Experience</h3>
-    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+<section class="relative py-16">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80" 
+         alt="Background" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div> <!-- Overlay -->
   </div>
 
-  <!-- Card 2 -->
-  <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
-    <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/16018147131XKP4-1.png" class="w-16 h-16 object-cover mb-4" alt="Credit Rating">
-    <h3 class="font-semibold text-black text-lg mb-2">Credit Rating</h3>
-    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-  </div>
+  <!-- Content -->
+  <div class="relative mx-auto px-4 ">
+    <h2 class="text-4xl text-center mb-10 text-white font-bold">WHAT SETS US APART</h2>
 
-  <!-- Card 3 -->
-  <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
-    <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1601814924a3KZv-1-1.png" class="w-16 h-16 object-cover mb-4" alt="Trust">
-    <h3 class="font-semibold text-black text-lg mb-2">Trust</h3>
-    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-  </div>
+    <div class="flex justify-between gap-4 flex-wrap">
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
+        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1598874514OFI5T-1-1.png" class="w-16 h-16 object-cover mb-4" alt="Experience">
+        <h3 class="font-semibold text-black text-lg mb-2">Experience</h3>
+        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
 
-  <!-- Card 4 -->
-  <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
-    <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1601815006zSCiO-1.png" class="w-16 h-16 object-cover mb-4" alt="Quality">
-    <h3 class="font-semibold text-black text-lg mb-2">Quality</h3>
-    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-  </div>
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
+        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/16018147131XKP4-1.png" class="w-16 h-16 object-cover mb-4" alt="Credit Rating">
+        <h3 class="font-semibold text-black text-lg mb-2">Credit Rating</h3>
+        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
 
-  <!-- Card 5 -->
-  <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
-    <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1601815006zSCiO-1.png" class="w-16 h-16 object-cover mb-4" alt="Design">
-    <h3 class="font-semibold text-black text-lg mb-2">Design</h3>
-    <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-  </div>
-</div>
+      <!-- Card 3 -->
+      <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
+        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1601814924a3KZv-1-1.png" class="w-16 h-16 object-cover mb-4" alt="Trust">
+        <h3 class="font-semibold text-black text-lg mb-2">Trust</h3>
+        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
 
+      <!-- Card 4 -->
+      <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
+        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1601815006zSCiO-1.png" class="w-16 h-16 object-cover mb-4" alt="Quality">
+        <h3 class="font-semibold text-black text-lg mb-2">Quality</h3>
+        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="flex flex-col items-center bg-[#9a9997] rounded-lg p-6 flex-1 text-center">
+        <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/1601815006zSCiO-1.png" class="w-16 h-16 object-cover mb-4" alt="Design">
+        <h3 class="font-semibold text-black text-lg mb-2">Design</h3>
+        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      </div>
+    </div>
   </div>
 </section>
+
+
+<!--  -->
+<section class="bg-black py-12 px-6">
+  <!-- Top Text -->
+  <div class="flex justify-between mb-8">
+    <h2 class="text-gray-500 text-xl  text-center w-1/2">VIP ZONE PROJECT</h2>
+    <h2 class="text-gray-500 text-xl  text-center w-1/2">GREEN ZONE PROJECT</h2>
+  </div>
+
+  <!-- Bottom Images -->
+  <div class="flex justify-between gap-4">
+    <!-- Image 1 -->
+    <div class="flex-1 flex items-center justify-center rounded-lg p-4">
+      <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/vipprojc.jpg" 
+           alt="Image 1" 
+           class="h-full w-full object-cover rounded">
+    </div>
+
+    <!-- Image 2 -->
+    <div class="flex-1 flex items-center justify-center rounded-lg p-4">
+      <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/plots1-768x432.jpg" 
+           alt="Image 2" 
+           class="h-full w-full object-cover rounded">
+    </div>
+  </div>
+</section>
+
+
+<!-- map -->
+ <section class="w-full h-96">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.903403543122!2d90.39629971543176!3d23.746466694536117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7b8b52c1a91%3A0xf58cbbf305f6a7ab!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+    class="w-full h-full"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<!-- footer -->
+ <footer class="bg-gray-900 text-white py-12 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+    <!-- About Section -->
+    <div class="flex flex-col items-start text-start space-y-4"> 
+      <img src="https://uniflexlimited.com/wp-content/uploads/2024/05/removal.ai__94a6a3c3-01fc-4442-8397-04a2a9c5e043-logo-removebg-preview.png" 
+           alt="About Us Image" class="w-30 h-30 rounded-full object-cover">
+
+      <h3 class="text-lg font-semibold">About Us</h3>
+      <p class="text-gray-400 text-sm max-w-xs">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="space-y-2">
+      <h3 class="text-lg font-semibold mb-2">Navigation</h3>
+      <ul class="space-y-6 text-gray-400 text-sm">
+        <li><a href="home.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="project.html" class="hover:text-yellow-400">Project</a></li>
+        <li><a href="news.html" class="hover:text-yellow-400">News & Update</a></li>
+        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Important Links -->
+    <div class="space-y-2">
+      <h3 class="text-lg font-semibold mb-2">Important Links</h3>
+      <ul class="space-y-6 text-gray-400 text-sm">
+        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+        <li><a href="project.html" class="hover:text-yellow-400">Project</a></li>
+        <li><a href="terms.html" class="hover:text-yellow-400">Terms & Condition</a></li>
+        <li><a href="refund.html" class="hover:text-yellow-400">Refund Policy</a></li>
+        <li><a href="faq.html" class="hover:text-yellow-400">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick Address -->
+    <div class="space-y-2">
+      <h3 class="text-lg font-semibold mb-2">Quick Address</h3>
+      <p class="text-gray-400 text-sm font-semibold">UNIFLEX LIMITED</p>
+      <p class="text-gray-400 text-sm">
+        স্বপ্নপূরনের বাস্তব ঠিকানা <br>
+        73, Waheed Masafi Centre, Purana Paltan Line (lift-6), Dhaka-1000
+      </p>
+      <p class="text-gray-400 text-sm">Phone: 01937777102</p>
+      <p class="text-gray-400 text-sm">Email: uniflexlimited5@gmail.com</p>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="border-t border-gray-700 mt-8 pt-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-gray-500 text-sm px-6">
+      <!-- Left Side -->
+      <div>
+        ©2024 All rights reserved by UNIFLEX
+      </div>
+
+      <!-- Right Side -->
+      <div>
+        This site design and developed by: <span class="text-red-500 font-semibold">HSBLCO</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 
